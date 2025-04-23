@@ -141,4 +141,4 @@ def web_page():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=25565)
+    app.run(host='0.0.0.0', port=25565, ssl_context='adhoc')
