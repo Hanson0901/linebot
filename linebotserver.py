@@ -145,4 +145,4 @@ if __name__ == "__main__":
         "/etc/letsencrypt/live/cgusqlpj.ddns.net/fullchain.pem",
         "/etc/letsencrypt/live/cgusqlpj.ddns.net/privkey.pem"
     )
-    app.run(host="0.0.0.0", port=443, ssl_context=context)
+    app.run(host="0.0.0.0", port=25565, ssl_context=context)
