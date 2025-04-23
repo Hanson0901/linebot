@@ -141,4 +141,8 @@ def web_page():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=25565, ssl_context='adhoc')
+    context = (
+        "/etc/letsencrypt/live/cgusqlpj.ddns.net/fullchain.pem",
+        "/etc/letsencrypt/live/cgusqlpj.ddns.net/privkey.pem"
+    )
+    app.run(host="0.0.0.0", port=443, ssl_context=context)
