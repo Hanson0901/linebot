@@ -141,4 +141,4 @@ def web_page():
 
 
 if __name__ == "__main__":
-    app.run(port=8000)  # 設定使用 port 8000 啟動伺服器
+    app.run(port=25565)  # 設定使用 port 8000 啟動伺服器
