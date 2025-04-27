@@ -56,7 +56,7 @@ def handle_postback(event):  # 當點選 rich menu 的按鈕後會觸發
         # 取得使用者 user_id
         user_id = event.source.user_id
         # 將 user_id 加入 URL 中
-        url = '  https://cgusqlpj.ddns.net/linebot/search.html?user_id=' + user_id
+        url = 'https://cgusqlpj.ddns.net/linebot/search.html?user_id=' + user_id
 
         message = TemplateSendMessage(
             alt_text='前往網頁',
