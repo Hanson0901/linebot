@@ -45,6 +45,10 @@ def callback():
     LOG.info("Request body: " + body)  # 將請求內容記錄到 LOG 中
     try:
         handler.handle(body, signature)  # 使用 handler 處理接收到的事件
+    except KeyError:
+        # 如果請求中沒有 X-Line-Signature 標頭
+        LOG.warning("無效請求：缺少 X-Line-Signature 標頭")
+        return '非 LINE Platform 的請求', 403
     except InvalidSignatureError:
         abort(400)  # 若 Line Signature 驗證失敗，則回傳 400 錯誤
     return 'OK'  # 回傳 "OK" 表示處理完成且正常結束log.infoThis domain may be for sale!
