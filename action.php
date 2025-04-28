@@ -3,7 +3,7 @@ header('Content-Type: application/json; charset=utf-8');
 $host = "localhost";
 $user = "root";
 $password = "Hanson940901";
-$database = "city";
+$database = "City";
 $link = mysqli_connect($host, $user, $password) or die("無法選擇資料庫");
 mysqli_select_db($link, $database);
 mysqli_query($link, "SET NAMES 'utf8'");
